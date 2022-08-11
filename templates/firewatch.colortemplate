@@ -72,28 +72,28 @@ Background: dark
 ; Color name         GUI                     Base256     Base16 (optional)
 Color: foreg         #f2a97d                   ~         White
 Color: backg         #381818                   ~         Black
-Color: black         #41444a                   ~         Black
+Color: black         #2e2828                   ~         Black
 Color: red           #a54242                   ~         DarkRed
 Color: green         #8c9440                   ~         DarkGreen
 Color: yellow        #DE803F                   ~         DarkYellow
 Color: blue          #256295                   ~         DarkBlue
 Color: magenta       #85678f                   ~         DarkMagenta
 Color: cyan          #5e8d87                   ~         DarkCyan
-Color: white         #707880                   ~         LightGrey
-Color: brightblack   #373b41                   ~         DarkGrey
+Color: lightgrey     #807970                   ~         LightGrey
+Color: darkgrey      #423838                   ~         DarkGrey
 Color: brightred     #cc6666                   ~         LightRed
 Color: brightgreen   #b5bd68                   ~         LightGreen
 Color: brightyellow  #F0B94E                   ~         LightYellow
 Color: brightblue    #5185B1                   ~         LightBlue
 Color: brightmagenta #b294bb                   ~         LightMagenta
 Color: brightcyan    #8abeb7                   ~         LightCyan
+Color: white         #c8c6c5                   ~         White
 ; You may use hexadecimal values, too, and you may provide an explicit base-256 color:
-Color: brightwhite   #c5c8c6                   ~        White
 ; }}}
 ; Terminal colors {{{
-Term colors: black red green yellow blue magenta cyan white
-Term colors: brightblack brightred brightgreen brightyellow
-Term colors: brightblue brightmagenta brightcyan brightwhite
+Term colors: black red green yellow blue magenta cyan lightgrey
+Term colors: darkgrey brightred brightgreen brightyellow
+Term colors: brightblue brightmagenta brightcyan white
 ; }}}
 
 ; Default highlight groups {{{
@@ -125,19 +125,19 @@ DiffChange           magenta           backg             reverse
 DiffDelete           red               backg             reverse
 DiffText             cyan              backg             bold,reverse
 Directory            brightblue        omit
-EndOfBuffer          white             omit
-ErrorMsg             brightwhite       red
+EndOfBuffer          lightgrey         omit
+ErrorMsg             white             red
 FoldColumn           foreg             omit
-Folded               white             brightblack       italic
+Folded               lightgrey         darkgrey       italic
 IncSearch            foreg             backg             t=reverse g=standout
-MatchParen           white             black             reverse
-ModeMsg              brightwhite       omit
+MatchParen           lightgrey         black             reverse
+ModeMsg              white             omit
 MoreMsg              foreg             backg
 NonText              foreg             omit
-Pmenu                brightwhite       cyan
-PmenuSbar            brightwhite       cyan
-PmenuSel             brightwhite       blue
-PmenuThumb           brightwhite       blue
+Pmenu                white             cyan
+PmenuSbar            white             cyan
+PmenuSel             white             blue
+PmenuThumb           white             blue
 Question             foreg             omit
 Search               foreg             backg             reverse
 SpecialKey           foreg             omit
@@ -155,34 +155,34 @@ SpellLocal           omit              omit              s=magenta undercurl
 SpellRare            omit              omit              s=cyan undercurl
 #endif
 
-StatusLine           brightwhite       backg             reverse
-StatusLineNC         white             backg             reverse
-TabLine              foreg             backg
-TabLineFill          foreg             backg
-TabLineSel           foreg             backg
+StatusLine           white             darkgrey          reverse
+StatusLineNC         lightgrey         darkgrey          reverse
+TabLine              lightgrey         black
+TabLineFill          lightgrey         black
+TabLineSel           white             darkgrey
 Title                yellow            none
-VertSplit            white             white             
-Visual               black             white
+VertSplit            lightgrey         lightgrey             
+Visual               black             lightgrey
 VisualNOS            foreg             backg
 WarningMsg           foreg             backg
 WildMenu             foreg             backg
 ; Other conventional group names (see `:help group-name`) 
 Comment              green             none              italic
-Constant             brightwhite       none
-Error                red               brightwhite       reverse
+Constant             white             none
+Error                red               white       reverse
 Identifier           brightcyan        none
-Ignore               white             none
+Ignore               lightgrey         none
 PreProc              brightmagenta     none
 Special              brightyellow      none
 Statement            yellow            none
-Todo                 white             none
+Todo                 lightgrey         none
 Type                 brightblue        none
-Underlined           white             none
+Underlined           lightgrey         none
 ; See `:help CursorIM`
 CursorIM             fg                none              reverse
 ; See `:help window-toolbar`
-ToolbarLine          white             black
-ToolbarButton        white             black             bold
+ToolbarLine          lightgrey         black
+ToolbarButton        lightgrey         black             bold
 ; }}}
 
 ; Additional highlight groups {{{
