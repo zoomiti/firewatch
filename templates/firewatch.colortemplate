@@ -102,19 +102,23 @@ Variant: gui
 Variant: 256 8
 #if get(g:, '@optionprefix_transp_bg', 0)
 Variant: gui 256 8
-    Normal           white             none
-    Terminal         white             none
+    Normal           foreg             none
+    Terminal         foreg             none
+    SignColumn       foreg             none
+    LineNr           brightyellow      none
 #else
     Normal           foreg             backg
     Terminal         foreg             backg
+    SignColumn       foreg             backg
+    LineNr           brightyellow      backg
 #endif
 
 ; Group              Foreground        Background        Attributes
 ColorColumn          none              none
 Conceal              none              none
 Cursor               foreg             omit
-CursorColumn         foreg             backg
-CursorLine           foreg             backg
+CursorColumn         foreg             omit
+CursorLine           foreg             omit
 CursorLineNr         foreg             omit
 DiffAdd              green             backg             reverse
 DiffChange           magenta           backg             reverse
@@ -123,22 +127,20 @@ DiffText             cyan              backg             bold,reverse
 Directory            brightblue        omit
 EndOfBuffer          white             omit
 ErrorMsg             brightwhite       red
-FoldColumn           foreg             backg
-Folded               foreg             backg             italic
+FoldColumn           foreg             omit
+Folded               white             brightblack       italic
 IncSearch            foreg             backg             t=reverse g=standout
-LineNr               brightyellow      backg
 MatchParen           white             black             reverse
-ModeMsg              foreg             backg
+ModeMsg              brightwhite       omit
 MoreMsg              foreg             backg
-NonText              foreg             backg
-Pmenu                foreg             backg
-PmenuSbar            foreg             backg
-PmenuSel             foreg             backg             reverse
-PmenuThumb           foreg             backg
-Question             foreg             backg
-Search               foreg             backg
-SignColumn           foreg             backg
-SpecialKey           foreg             backg
+NonText              foreg             omit
+Pmenu                brightwhite       cyan
+PmenuSbar            brightwhite       cyan
+PmenuSel             brightwhite       blue
+PmenuThumb           brightwhite       blue
+Question             foreg             omit
+Search               foreg             backg             reverse
+SpecialKey           foreg             omit
 
 #if &term =~ 'alacritty\|xterm'
 #let &t_AU = "\e[58;5;%dm"
@@ -187,6 +189,5 @@ ToolbarButton        white             black             bold
 ; Add additional highlight groups here if you want
 ; }}}
 
-; B/W variant {{{
-; Include: _bw.colortemplate
+; Include: _bw.colortemplateas das 
 ; }}}
