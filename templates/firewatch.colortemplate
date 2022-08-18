@@ -189,5 +189,6 @@ ToolbarButton        lightgrey         black             bold
 ; Add additional highlight groups here if you want
 ; }}}
 
-; Include: _bw.colortemplateas das 
+; Lightline stuff {{{
+Include: _lightline
 ; }}}

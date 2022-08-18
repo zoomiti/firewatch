@@ -1,0 +1,55 @@
+auxfile autoload/lightline/colorscheme/@shortname.vim
+if &background ==# '@background'
+	let s:black = [ '@guiblack', @term256black ]
+	let s:darkgrey = [ '@guidarkgrey', @term256darkgrey ]
+	let s:lightgrey = [ '@guilightgrey', @term256lightgrey ]
+	let s:white = [ '@guiwhite', @term256white ]
+	
+	let s:backg = [ '@guibackg', @term256backg ]
+	let s:foreg = [ '@guiforeg', @term256foreg ]
+	
+	let s:green  = [ '@guigreen', @term256green ]
+	let s:yellow = [ '@guibrightyellow', @term256brightyellow ]
+	let s:orange = [ '@guiyellow', @term256yellow ]
+	let s:blue   = [ '@guiblue', @term256blue ]
+	let s:cyan   = [ '@guibrightcyan', @term256brightcyan ]
+	let s:red = [ '@guired', @term256red ]
+	
+	let s:p = { 'normal': {}, 'inactive': {}, 'insert': {}, 'replace': {}, 'visual': {}, 'tabline': {}, 'terminal': {} }
+	
+	let s:p.normal.left   = [ [ s:black, s:white, 'bold' ], [ s:darkgrey, s:lightgrey ] ]
+	let s:p.normal.right  = [ [ s:black, s:white ], [ s:darkgrey, s:lightgrey ] ]
+	let s:p.normal.middle = [ [ s:lightgrey, s:darkgrey ] ]
+	
+	let s:p.inactive.left   = [ [ s:lightgrey, s:darkgrey ], [ s:lightgrey, s:darkgrey ] ]
+	let s:p.inactive.right  = [ [ s:lightgrey, s:darkgrey ], [ s:lightgrey, s:darkgrey ] ]
+	let s:p.inactive.middle = [ [ s:lightgrey, s:darkgrey ] ]
+	
+	let s:p.insert.left   = [ [ s:black, s:yellow, 'bold' ], [ s:lightgrey, s:darkgrey ] ]
+	let s:p.insert.right  = [ [ s:black, s:yellow ], [ s:lightgrey, s:darkgrey ] ]
+	let s:p.insert.middle = [ [ s:white, s:darkgrey ] ]
+	
+	let s:p.terminal.left   = [ [ s:black, s:cyan, 'bold' ], [ s:darkgrey, s:lightgrey ] ]
+	let s:p.terminal.right  = [ [ s:black, s:cyan ], [ s:darkgrey, s:lightgrey ] ]
+	let s:p.terminal.middle = [ [ s:lightgrey, s:darkgrey ] ]
+	
+	let s:p.replace.left   = [ [ s:black, s:orange, 'bold' ], [ s:lightgrey, s:darkgrey ] ]
+	let s:p.replace.right  = [ [ s:black, s:orange ], [ s:lightgrey, s:darkgrey ] ]
+	let s:p.replace.middle = [ [ s:white, s:darkgrey ] ]
+	
+	let s:p.visual.left   = [ [ s:black, s:green, 'bold' ], [ s:black, s:lightgrey ] ]
+	let s:p.visual.right  = [ [ s:black, s:green ], [ s:black, s:lightgrey ] ]
+	let s:p.visual.middle = [ [ s:lightgrey, s:darkgrey ] ]
+	
+	let s:p.tabline.left   = [ [ s:lightgrey, s:black ] ]
+	let s:p.tabline.right  = [ [ s:white, s:darkgrey ] ]
+	let s:p.tabline.middle = [ [ s:lightgrey, s:black ] ]
+	let s:p.tabline.tabsel = [ [ s:white, s:darkgrey ] ]
+	
+	let s:p.normal.error   = [ [ s:black, s:red ] ]
+	let s:p.normal.warning = [ [ s:lightgrey, s:yellow ] ]
+	
+	let g:lightline#colorscheme#fire#palette = lightline#colorscheme#flatten(s:p)
+endif
+
+endauxfile
