@@ -134,10 +134,10 @@ MatchParen           lightgrey         black             reverse
 ModeMsg              white             omit
 MoreMsg              foreg             backg
 NonText              foreg             omit
-Pmenu                white             cyan
-PmenuSbar            white             cyan
-PmenuSel             white             blue
-PmenuThumb           white             blue
+Pmenu                white             blue
+PmenuSbar            white             blue
+PmenuSel             white             magenta
+PmenuThumb           white             magenta
 Question             foreg             omit
 Search               foreg             backg             reverse
 SpecialKey           foreg             omit
