@@ -187,6 +187,13 @@ ToolbarButton        lightgrey         black             bold
 
 ; Additional highlight groups {{{
 ; Add additional highlight groups here if you want
+
+DiagnosticUnnecessary lightgrey               none 
+#if has("nvim")
+@variable            foreg                    none
+@function.macro      brightmagenta            none
+LspInlayHint         lightgrey                none
+#endif
 ; }}}
 
 ; Lightline stuff {{{
