@@ -90,6 +90,7 @@ Color: brightcyan    #8abeb7                   ~         LightCyan
 Color: white         #c8c6c5                   ~         White
 ; You may use hexadecimal values, too, and you may provide an explicit base-256 color:
 ; }}}
+
 ; Terminal colors {{{
 Term colors: black red green yellow blue magenta cyan lightgrey
 Term colors: darkgrey brightred brightgreen brightyellow
@@ -153,6 +154,11 @@ SpellBad             omit              omit              s=red undercurl
 SpellCap             omit              omit              s=blue undercurl
 SpellLocal           omit              omit              s=magenta undercurl
 SpellRare            omit              omit              s=cyan undercurl
+DiagnosticUnderlineError omit              omit              s=red undercurl
+DiagnosticUnderlineWarn  omit              omit              s=brightyellow undercurl
+DiagnosticUnderlineInfo  omit              omit              s=brightcyan undercurl
+DiagnosticUnderlineHint  omit              omit              s=white undercurl
+DiagnosticUnderlineOk    omit              omit              s=green undercurl
 #endif
 
 StatusLine           white             darkgrey          reverse
@@ -172,7 +178,7 @@ Constant             white             none
 Error                red               white       reverse
 Identifier           brightcyan        none
 Ignore               lightgrey         none
-PreProc              brightmagenta     none
+PreProc              magenta           none
 Special              brightyellow      none
 Statement            yellow            none
 Todo                 lightgrey         none
@@ -189,10 +195,32 @@ ToolbarButton        lightgrey         black             bold
 ; Add additional highlight groups here if you want
 
 DiagnosticUnnecessary lightgrey               none 
+RustSigil -> RustOperator
+RustStorage -> RustKeyword
+RustFoldBraces -> Special
+RustSelf -> Special
 #if has("nvim")
 @variable            foreg                    none
 @function.macro      brightmagenta            none
+
 LspInlayHint         lightgrey                none
+@lsp.type.decorator  -> PreProc
+@lsp.typemod.decorator.attribute -> PreProc
+@lsp.type.macro      brightmagenta            none
+@lsp.type.derive -> @lsp.type.macro
+@lsp.type.generic -> @lsp.type.macro
+;@lsp.typemod.method.macro -> @lsp.type.macro
+@lsp.typemod.method.procMacro -> @lsp.type.macro
+@lsp.type.variable -> omit
+@lsp.type.character -> Character
+
+@lsp.type.namespace        cyan               none
+@lsp.mod.crateRoot.rust    blue               none
+; @lsp.type.function.rust -> omit
+
+@tag.rust_with_rstml -> Type
+@tag.attribute.rust_with_rstml -> Identifier
+
 #endif
 ; }}}
 
